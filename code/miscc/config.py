@@ -34,8 +34,8 @@ __C.TRAIN.GENERATOR_LR = 2e-4
 __C.TRAIN.ENCODER_LR = 2e-4
 __C.TRAIN.RNN_GRAD_CLIP = 0.25
 __C.TRAIN.FLAG = True
-__C.TRAIN.NET_E = ''
-__C.TRAIN.NET_G = ''
+__C.TRAIN.NET_E = '/drive/MyDrive/output/DAMSMencoders/Model/text_encoder70.pth'
+__C.TRAIN.NET_G = '/drive/MyDrive/output/coco_ControlGAN_new/Model/netG_epoch_9.pth'
 __C.TRAIN.WORD_CORRE = ''
 __C.TRAIN.B_NET_D = True
 
