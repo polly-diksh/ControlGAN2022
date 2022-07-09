@@ -21,6 +21,26 @@ from VGGFeatureLoss import VGGNet
 from miscc.losses import words_loss
 from miscc.losses import discriminator_loss, generator_loss, KL_loss
 
+## gradient penalty calculation
+
+def get_gp(real, fake, crit, alpha, gamma=10):
+  mix_images = real * alpha + fake * (1-alpha) # 128 x 3 x 128 x 128
+  mix_scores = crit(mix_images) # 128 x 1
+
+  gradient = torch.autograd.grad(
+      inputs = mix_images,
+      outputs = mix_scores,
+      grad_outputs=torch.ones_like(mix_scores),
+      retain_graph=True,
+      create_graph=True,
+  )[0] # 128 x 3 x 128 x 128
+
+  gradient = gradient.view(len(gradient), -1)   # 128 x 49152
+  gradient_norm = gradient.norm(2, dim=1) 
+  gp = gamma * ((gradient_norm-1)**2).mean()
+
+  return gp
+
 import os
 import time
 import numpy as np
@@ -273,6 +293,10 @@ class condGANTrainer(object):
                                               sent_emb, real_labels, fake_labels,
                                               words_embs, cap_lens, image_encoder, class_ids, w_words_embs, 
                                               wrong_caps_len, wrong_cls_id)
+                    alpha=torch.rand(len(imgs[i]),1,1,1,device='cuda', requires_grad=True) # 128 x 1 x 1 x 1
+
+                    gp = get_gp(imgs[i], fake_imgs[i].detach(), netsD[i], alpha)
+                    errD += gp
                     # backward and update parameters
                     errD.backward(retain_graph=True)
                     optimizersD[i].step()
