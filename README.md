@@ -40,8 +40,9 @@ python main.py --cfg cfg/train_coco.yml --gpu 0
 
 #### Pretrained DAMSM Model
 - [DAMSM for bird](https://drive.google.com/file/d/1dbdCgaYr3z80OVvISTbScSy5eOSqJVxv/view?usp=sharing). Download and save it to `DAMSMencoders/`
-- [DAMSM for coco] image encoder = [https://drive.google.com/file/d/15I4LaLujykZ3iPH6-QlGOVwh1nPojgOZ/view?usp=sharing]
--                  text encoder = [https://drive.google.com/file/d/1zDv6o8puIH_96V_rKqH_u1ymdh7U4chv/view?usp=sharing]
+- [DAMSM for coco] 
+- image encoder = [https://drive.google.com/file/d/15I4LaLujykZ3iPH6-QlGOVwh1nPojgOZ/view?usp=sharing]
+- text encoder = [https://drive.google.com/file/d/1zDv6o8puIH_96V_rKqH_u1ymdh7U4chv/view?usp=sharing]
 -  Download and save it to `DAMSMencoders/`
 #### Pretrained ControlGAN Model
 - [ControlGAN for bird](https://drive.google.com/file/d/1g1Kx5-hUXfJOGlw2YK3oVa5C9IoQpnA_/view?usp=sharing). Download and save it to `models/`
