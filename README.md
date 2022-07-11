@@ -1,4 +1,4 @@
-# ControlGAN 
+# ControlGAN  for COCO dataset
 Pytorch implementation for Controllable Text-to-Image Generation. The goal is to generate images from text, and also allow the user to manipulate synthetic images using natural language descriptions, in one framework. 
 
 ### Overview
