@@ -13,7 +13,7 @@ TREE:
 
 TRAIN:
     FLAG: True
-    NET_E: '/drive/MyDrive/output/DAMSMencoders/Model/text_encoder70.pth' 
+    NET_E: '../DAMSMencoders/coco/text_encoder70.pth' 
     BATCH_SIZE: 48
     MAX_EPOCH: 600
     SNAPSHOT_INTERVAL: 5
