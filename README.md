@@ -23,7 +23,7 @@ python pretrain_DAMSM.py --cfg cfg/DAMSM/bird.yml --gpu 0
 ```
 - Pre-train DAMSM model for coco dataset: 
 ```
-python pretrain_DAMSM.py --cfg cfg/DAMSM/coco.yml --gpu 1
+python pretrain_DAMSM.py --cfg cfg/DAMSM/coco.yml --gpu 0
 ```
 #### ControlGAN model 
 - Train ControlGAN model for bird dataset:
@@ -32,7 +32,7 @@ python main.py --cfg cfg/train_bird.yml --gpu 2
 ```
 - Train ControlGAN model for coco dataset: 
 ```
-python main.py --cfg cfg/train_coco.yml --gpu 3
+python main.py --cfg cfg/train_coco.yml --gpu 0
 ```
 
 `*.yml` files include configuration for training and testing.
@@ -40,7 +40,9 @@ python main.py --cfg cfg/train_coco.yml --gpu 3
 
 #### Pretrained DAMSM Model
 - [DAMSM for bird](https://drive.google.com/file/d/1dbdCgaYr3z80OVvISTbScSy5eOSqJVxv/view?usp=sharing). Download and save it to `DAMSMencoders/`
-- [DAMSM for coco](https://drive.google.com/file/d/1k8FsZFQrrye4Ght1IVeuphFMhgFwOxTx/view?usp=sharing). Download and save it to `DAMSMencoders/`
+- [DAMSM for coco] image encoder = [https://drive.google.com/file/d/15I4LaLujykZ3iPH6-QlGOVwh1nPojgOZ/view?usp=sharing]
+-                  text encoder = [https://drive.google.com/file/d/1zDv6o8puIH_96V_rKqH_u1ymdh7U4chv/view?usp=sharing]
+-  Download and save it to `DAMSMencoders/`
 #### Pretrained ControlGAN Model
 - [ControlGAN for bird](https://drive.google.com/file/d/1g1Kx5-hUXfJOGlw2YK3oVa5C9IoQpnA_/view?usp=sharing). Download and save it to `models/`
 
@@ -51,7 +53,7 @@ python main.py --cfg cfg/eval_bird.yml --gpu 4
 ```
 - Test ControlGAN model for coco dataset: 
 ```
-python main.py --cfg cfg/eval_coco.yml --gpu 5
+python main.py --cfg cfg/eval_coco.yml --gpu 0
 ```
 ### Evaluation
 
