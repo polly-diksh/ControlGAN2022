@@ -11,7 +11,7 @@ TREE:
 
 TRAIN:
     FLAG: True
-    NET_G: '/drive/MyDrive/output/coco_ControlGAN_new/Model/netG_epoch_9.pth' 
+    NET_G: '/drive/MyDrive/output/coco_ControlGAN_2022_07_22_21_44_43/Model/netG_epoch_56.pth' 
     B_NET_D: True
     BATCH_SIZE: 8
     MAX_EPOCH: 120
@@ -19,7 +19,7 @@ TRAIN:
     DISCRIMINATOR_LR: 0.0002
     GENERATOR_LR: 0.0002
     #
-    NET_E: '../DAMSMencoders/coco/text_encoder70.pth'
+    NET_E: '/drive/MyDrive/output/coco_DAMSM_2022_08_10_03_29_58/Model/text_encoder600.pth'
     SMOOTH:
         GAMMA1: 4.0  
         GAMMA2: 5.0
