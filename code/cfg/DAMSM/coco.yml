@@ -15,7 +15,7 @@ TRAIN:
     FLAG: True
     NET_E: '/drive/MyDrive/output/coco_DAMSM_2022_08_10_03_29_58/Model/text_encoder600.pth'
     BATCH_SIZE: 48
-    MAX_EPOCH: 600
+    MAX_EPOCH: 601
     SNAPSHOT_INTERVAL: 5
     ENCODER_LR: 0.002 
     RNN_GRAD_CLIP: 0.25
